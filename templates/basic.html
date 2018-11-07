@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<!--
+ csound.js basic template
+ Copyright (C) 2018 V Lazzarini
+-->
+
+<head>
+  <title>WebAudio Csound</title>
+  <style type="text/css">
+  html, body {
+    font-family: Monospace;
+    color: #bf94f7;
+    background-color: #000055;
+  }
+  #console {
+      font-family:  Monospace;
+      color: #b5b6ff;
+      background-color: #000000;
+      font-size: 16px;
+    }
+
+   #tit {
+    font-family: Monospace;
+    font-size: 24px;
+    width: 810px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-style: solid;
+    padding: 20px 0px;
+   }
+
+   H1 {
+     font-size: 36px;
+   }
+
+  </style>
+  <script type="text/javascript" src="../examples/js/csound.js"></script>
+  <script type="text/javascript">
+    // called by csound.js
+    function moduleDidLoad() {
+      CSOUND_AUDIO_CONTEXT.resume();
+      started = true;
+      csound.CompileOrc(document.getElementById('instruments').value);
+      Play("i1 0 1");
+    }
+
+    // called by csound.js
+    function attachListeners() {
+    }
+
+     var count = 0;
+    // called by csound.js
+    function handleMessage(message) {
+      var element = document.getElementById('console');
+      element.value += message;
+      element.scrollTop = 99999; // focus on bottom
+      count += 1;
+      if (count == 1000) {
+        element.value = ' ';
+        count = 0;
+      }
+    }
+   
+    function Play(scoreline) {
+      csound.Event(scoreline);
+    }
+  </script>
+</head>
+
+<body>
+
+    <H1> Basic Template </H1>
+    <textarea class="console" cols="80" rows="24" id="console">
+          Csound: not loaded</textarea>
+
+<textarea class="code" id="instruments" hidden>
+/*
+   this is where we can place the Csound synthesis code
+*/
+
+instr 1
+a1 oscili 0dbfs/2, A4
+   out a1
+endin
+
+</textarea>
+
+
+</body>
+
+</html>
