@@ -39,11 +39,11 @@
   <script type="text/javascript" src="../examples/js/csound.js"></script>
   <script type="text/javascript">
     // called by csound.js
-    function moduleDidLoad() {
+  function moduleDidLoad() {
       CSOUND_AUDIO_CONTEXT.resume();
       started = true;
+      csound.Play();
       csound.CompileOrc(document.getElementById('instruments').value);
-      Play("i1 0 1");
     }
 
     // called by csound.js
@@ -62,10 +62,7 @@
         count = 0;
       }
     }
-   
-    function Play(scoreline) {
-      csound.Event(scoreline);
-    }
+
   </script>
 </head>
 
@@ -82,9 +79,9 @@
 
 instr 1
 a1 oscili 0dbfs/2, A4
-   out a1
+   out a1, a1
 endin
-
+schedule(1,0,5)
 </textarea>
 
 
