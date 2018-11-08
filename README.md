@@ -15,5 +15,4 @@ can be found [here](examples/docs/index.html).
 A simple python script running a local web server for development is
 also [provided](httpd.py).
 
-Templates for Csound-powered HTML pages are
-[available](https://github.com/vlazzarini/paw/templates).
+Templates for Csound-powered HTML pages are [available](./templates).
