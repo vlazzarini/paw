@@ -11,3 +11,6 @@ available.
 
 Reference documentation for the CsoundObj API and the csound.js frontend
 can be found [here](examples/docs/index.html).
+
+A simple python script running a local web server for development is
+also [provided](httpd.py).
