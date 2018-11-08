@@ -1,45 +1,35 @@
 WebAudio Csound Examples
-===============
+========================
 
-In this directory, we are building a collection of step-by-step examples using WAAW Csound. To run these,
-once the latest library is built, use `../update_example_libs_from_dist.shupdate-scripts.sh` to copy the
-relevant code to the local `js` directory. You will also need a
-http-server to serve the WebAudio Csound source files.
+-   [Random note generator](randgen.html): This example demonstrates how
+    to load the WASM Csound library and use the CsoundObj class to
+    compile and perform simple synthesis code that is embedded in the
+    HTML page.
 
+-   [Minimal](minimal.html): This example demonstrates the csound.js
+    javascript frontend to create a simple interactive page.
 
-* [Random note generator](https://github.com/csound/csound/blob/develop/emscripten/examples/randgen.html):
-This example demonstrates how to load the WASM Csound library and use the CsoundObj class to compile and perform 
-simple synthesis code that is embedded in the HTML page.
+-   [Sliders](sliders.html): This example demonstrates how to use
+    channels to send control data into Csound from HTML 5 sliders.
 
-* [Sliders](https://github.com/csound/csound/blob/develop/emscripten/examples/sliders.html):
-This example demonstrates how to use channels to send control data into Csound from HTML 5
-sliders.
+-   [Canvas](canvas.html): A two-dimension control surface accepting
+    mouse or touch interactions.
 
-* [Minimal](https://github.com/csound/csound/blob/develop/emscripten/examples/minimal.html):
-This example demonstrates the csound.js javascript frontend that can
-be used to port PNaCl Csound examples more conveniently. 
+-   [Reverb](reverb.html): A reverb effect using external audio input
+    (e.g. microphone).
 
-* [Canvas](https://github.com/csound/csound/blob/develop/emscripten/examples/canvas.html):
-Canvas widget example ported from the PNaCl Csound collection.
+-   [Step Sequencer](tabex.html): A step sequencer demonstrating the use
+    of Csound tables.
 
-* [StepSeq](https://github.com/csound/csound/blob/develop/emscripten/examples/tabex.html):
-Step Sequencer example demonstrating the use of tables in Csound.
+-   [MIDI](midi.html): a virtual MIDI input example using HTML 5 buttons
+    to send MIDI channel messages to Csound.
 
-* [Reverb](https://github.com/csound/csound/blob/develop/emscripten/examples/reverb.html):
-Reverb effect demonstrating realtime audio input (e.g. microphone).
+-   [MIDIPlayer](midiplayer.html): a GM MIDI file Player using
+    soundfonts.
 
-* [MIDI](https://github.com/csound/csound/blob/develop/emscripten/examples/midi.html):
-MIDI input example using HTML 5 buttons to generate MIDI data.
+-   [CSDPlayer](csdplayer.html): a realtime CSD player.
 
-* [MIDIPlayer](https://github.com/csound/csound/blob/develop/emscripten/examples/midiplayer.html):
-GM MIDI file player ported from the PNaCl Csound collection.
+-   [Stria](stria.html): a CSD performance of John Chowning's classic
+    piece.
 
-* [CSDPlayer](https://github.com/csound/csound/blob/develop/emscripten/examples/csdplayer.html):
-Offline render example ported from the PNaCl Csound collection.
-
-* [Stria](https://github.com/csound/csound/blob/develop/emscripten/examples/stria.html):
-Stria by J Chowning CSD performance example ported from the PNaCl
-Csound collection.
-
-
-
+Reference documentation can be found [here](docs/index.html).
