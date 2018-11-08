@@ -36,22 +36,27 @@
    }
 
   </style>
-  <script type="text/javascript" src="https://waaw.csound.com/js/csound.js"></script>
+  <script type="text/javascript" src="../examples/js/csound.js"></script>
   <script type="text/javascript">
-    // called by csound.js
-  function moduleDidLoad() {
+    // called by csound.js when the WASM module loads
+   function moduleDidLoad() {
+      // kickstart webaudio (needed in some browsers)
       CSOUND_AUDIO_CONTEXT.resume();
-      started = true;
-      csound.Play();
+      // play starts performance
+      csound.Play();  
+      // compile code 
       csound.CompileOrc(document.getElementById('instruments').value);
+      // instantiate instr 1 to perform for 2 seconds
+      csound.Event("i1 0 2 0.5 440");
     }
 
     // called by csound.js
     function attachListeners() {
+        // event listeners
     }
 
      var count = 0;
-    // called by csound.js
+    // called by csound.js to display messages from Csound
     function handleMessage(message) {
       var element = document.getElementById('console');
       element.value += message;
@@ -76,12 +81,10 @@
 /*
    this is where we can place the Csound synthesis code
 */
-
 instr 1
-a1 oscili 0dbfs/2, A4
+a1 oscili p4, p5
    out a1, a1
 endin
-schedule(1,0,5)
 </textarea>
 
 
