@@ -40,11 +40,9 @@
   <script type="text/javascript">
     // called by csound.js when the WASM module loads
    function moduleDidLoad() {
-      // kickstart webaudio (needed in some browsers)
-      CSOUND_AUDIO_CONTEXT.resume();
       // play starts performance
-      csound.Play();  
-      // compile code 
+      csound.Play();
+      // compile code
       csound.CompileOrc(document.getElementById('instruments').value);
       // instantiate instr 1 to perform for 2 seconds
       csound.Event("i1 0 2 0.5 440");
