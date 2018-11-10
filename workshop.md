@@ -173,5 +173,5 @@ csound.getNode().connect(scopeNode);
 
 ```
 
-Further details on the CsoundObj API is provided in the
+Further details on the CsoundObj API are provided in the
 [reference documentation](examples/docs/index.html).
