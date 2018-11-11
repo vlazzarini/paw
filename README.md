@@ -1,10 +1,11 @@
-PAW Materials {#PAW materials}
-=============
+Programmable Audio Workshop Materials {#PAW materials}
+=====================================
 
 The compiled binaries and associated JavaScript files for WebAudio
 Csound can be downloaded from
 [csound.com](https://csound.com/download.html). These files are also
-provided by the [PAW repository](https://github.com/vlazzarini/paw).
+provided here, in the [PAW
+repository](https://github.com/vlazzarini/paw).
 
 A number of WebAudio Csound [examples](examples/index.html) are
 available.
@@ -15,4 +16,5 @@ can be found [here](examples/docs/index.html).
 A simple python script running a local web server for development is
 also [provided](httpd.py).
 
-Templates for Csound-powered HTML pages are [available](./templates).
+[These](workshop.html) are the workshop notes, which refer to
+Csound-powered HTML page [templates](./templates/index.html).
