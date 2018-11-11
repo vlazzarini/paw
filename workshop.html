@@ -1,5 +1,56 @@
-<h1 id="webaudio-csound-workshop-notes">WebAudio Csound Workshop Notes</h1>
-<h2 id="introduction-system-components">1. Introduction: system components</h2>
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>WebAudio Csound</title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, shrink-to-fit=no" />
+  <meta property="og:title" content="PAW Materials" />
+  <meta property="og:description" content="A set of WebAudio Csound demos
+  and templates for the programmable audio workshop" />
+  <meta property="og:image" content="http://waaw.csound.com/og_image.png" />
+  <meta property="og:url" content="http://waaw.csound.com/index.html" />
+
+  <style type="text/css">
+    html,
+    body {
+      font-family: Monospace;
+      color: #bf94f7;
+      background-color: #000055;
+      font-size: 20px;
+    }
+
+    A {
+      color: #FFFFFF;
+    }
+
+    A:link {
+
+      text-decoration: none;
+    }
+
+    H1 {
+      font-size: 36px;
+}
+
+H2 {
+color: #b5b6ff;
+ 
+   }
+
+code {
+     color: #AAAAAA;
+}
+
+  </style>
+</head>
+
+<body>
+
+<h1>WebAudio Csound Workshop Notes</h1>
+<h2>1. Introduction: system components</h2>
 <p>Csound is a sound and music computing system, which is available for a variety of platforms from supercomputers to embedded devices. The system is composed of a domain-specific language, designed to implement audio signal processing and music control operations, and an audio engine, which runs code compiled for it.</p>
 <p>Its central component is the Csound library (libcsound), which provides a C-language API that allows the Csound language compiler and engine to be manipulated programmatically. The API is available for a variety of other languages, such as Java, Python, LISP, Lua, etc.</p>
 <p>On the Web platform, Csound is available through a Web Assembly (WASM)-compiled libcsound, Particularly in the case of JavaScript, the access to the C API is mediated by a higher-level interface, provided by the CsoundObj JS API.</p>
@@ -73,3 +124,7 @@ scopeNode = CSOUND_AUDIO_CONTEXT.createAnalyser();
 csound.getNode().connect(scopeNode);
 </code></pre>
 <p>Further details on the CsoundObj API are provided in the <a href="examples/docs/index.html">reference documentation</a>.</p>
+
+</body>
+
+</html>
