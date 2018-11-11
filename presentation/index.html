@@ -66,6 +66,7 @@
       }
 			.reveal h2 { font-family: Monospace; }
 			.reveal h3 { color: #bf94f7; font-family: Monospace; }
+			.reveal li { color: #bf94f7; font-family: Monospace; }
 			.reveal section p { font-family: Monospace; color: #b5b6ff; text-align: left;}
       .reveal section img { border: none; }
       .reveal h4 { font-family: Monospace; color: #b5b6ff;  text-align: center;}
@@ -89,6 +90,8 @@
     cursor: pointer;
 }
 
+
+
     </style>
 
 	</head>
@@ -100,8 +103,6 @@
 					<h3>57 years of Computer Music Languages</h3>
           <h4>Victor Lazzarini</h4>
         </section>
-
-<section>
 <section>
 <h3>Introduction</h3>
 <p>
@@ -112,12 +113,94 @@ development and the body of knowledge that precedes it.
 </p>
 </section>
 <section>
+<h3>Max Mathews</h3>
+<p>
+Programming music and audio in digital computers started with
+Max Mathews and his group at Bell Labs in 1957.
+</p>
+<p>
+Two developments were key:
+<UL>
+<LI> direct digital synthesis by software with
+MUSIC I and MUSIC II; </li>
+<LI> a practical DAC to convert digital audio
+from computer tapes.</li>
+</uL>
+</p>
+</section>
+<section>
+<section>
+<h3>Roots: MUSIC III (1961) </h3>
+<p> MUSIC III introduced the idea of an 'acoustic compiler'.
+<p>
+<p>
+ It also introduced the concept of the unit generator, a central component of
+ music programming languages.
+</p>
+</section>
+<section>
+<img src="mathews-bell-journal-1961.jpg" width="400"> </img>
+</section>
+<section>
+<img src="flowMIII.jpg" width="400"> </img> <br>
+<img src="codeMIII.jpg" width="400"> </img>
+</section>
+</section>
+<section>
+<section>
+<h3>Trunk: MUSIC IV (1964) </h3>
+<p> MUSIC IV introduced a domain-specific language for
+	music and a number of other unit generators.
+</p>
+<p>
+A more complex system, allowed the use of Fortran-coded
+routines for event manipulation.
+</p>
+</section>
+<section>
+<img src="flowMIV.jpg" width="400"> </img>
+</section>
+</section>
+<section>
+<section>
+<h3>Branches </h3>
+<p> MUSIC IV was the model for a great number of
+	systems that were developed in the following
+	decades.
+</p>
+<p>
+MUSIC IVB, MUSIC IVBF, MUSIC 4C, MUSIC 10
+MUSIC V, CMUSIC, CMIX, CLM
+</p>
+</section>
+<section>
+<h3>Music 360 (1968)</h3>
+<img src="codeM360.jpg" width="400"> </img>
+</section>
+<section>
+<h3>Music 11 (1977)</h3>
+<img src="music11.jpg" width="400"> </img> <br>
+<img src="codeM11.jpg" width="400"> </img>
+</section>
+</section>
+<section>
+<section>
+<h3>Csound</h3>
+<p> Released, 1986; RT audio &amp; MIDI, 1990; ANSI C, 1993;
+	Extended Csound, 1998; The Csound Book (MIT Press), 2000; API, 2003;
+	Version 5, 2006; Version 6, 2013; Csound: A Sound and Music Programming
+	System (Springer), 2016.
+</p>
+</section>
+<section>
+	<h3> Audio Programming with Csound </h3>
+	<img src="levels.png" width="400" style="background-color:#000055;"> </img>
+</section>
+<section>
 	<p>
-
 	<textarea class="cscode" id="instruments" cols="80" rows="10" spellcheck="false">
 instr 1
-a1 oscili p4, p5
- out a1, a1
+ out(oscili(p4, p5))
 endin
 schedule(1,0,1,0.5,440)
 </textarea>
@@ -129,41 +212,6 @@ schedule(1,0,1,0.5,440)
 </section>
 </section>
 <section>
-<h3>Max Mathews</h3>
-</section>
-<section>
-<section>
-<h3>Roots: MUSIC III (1961) </h3>
-</section>
-<section>
-</section>
-</section>
-<section>
-<section>
-<h3>Trunk: MUSIC IV (1964) </h3>
-</section>
-<section>
-</section>
-</section>
-<section>
-<section>
-<h3>Branches </h3>
-</section>
-<section>
-<h3>Music 360</h3>
-</section>
-<section>
-<h3>Music 11</h3>
-</section>
-</section>
-<section>
-<section>
-<h3>Csound (1986)</h3>
-</section>
-<section>
-</section>
-</section>
-<section>
 	<a href="http://localhost:8080/examples/stria.html" data-preview-link>
 		<img src="csound.jpg" width="400"> </img>
 	</a>
@@ -171,8 +219,8 @@ schedule(1,0,1,0.5,440)
 <section>
           <h2>Thank you!</h2>
           <ul>
-            <li>Csound Homepage: https://www.csound.com</li>
-            <li>Email:Victor.Lazzarini@mu.ie</li>
+            <li>Csound Homepage: <a href="https://csound.com" target="newwindow">www.csound.com<a> </li>
+            <li>Email: Victor.Lazzarini@mu.ie</li>
 					</ul>
 </section>
 
