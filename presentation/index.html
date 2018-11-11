@@ -1,0 +1,227 @@
+<html>
+	<head>
+
+    <title>Csound</title>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/moon.css">
+		<!-- Theme used for syntax highlighting of code -->
+<link rel="stylesheet" href="lib/css/zenburn.css">
+<!-- Printing and PDF exports -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+		#console {
+			font-family: Monospace;
+      color: #b5b6ff;
+      background-color: #000055;
+      font-size: 16px;
+      width: 805px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-style: hidden;
+      padding: 20px 0px;
+      }
+
+			#instruments {
+				font-family: Monospace;
+	      color: #b5b6ff;
+	      background-color: #000055;
+	      font-size: 16px;
+	      width: 805px;
+	      display: flex;
+	      align-items: center;
+	      justify-content: center;
+	      border-style: hidden;
+	      padding: 20px 0px;
+
+	    }
+
+
+      .reveal blockquote {
+          text-align: left;
+          width: 90%;
+          border: none;
+          box-shadow: none;
+          background: none;
+      }
+      .reveal blockquote:before { content: ''; }
+      .reveal blockquote:after { content: ''; }
+
+      .process-box1 {
+        background: #ccc;
+        color: black;
+        }
+
+      .arrow {
+        font-size: 2rem;
+      }
+			.reveal h2 { font-family: Monospace; }
+			.reveal h3 { color: #bf94f7; font-family: Monospace; }
+			.reveal section p { font-family: Monospace; color: #b5b6ff; text-align: left;}
+      .reveal section img { border: none; }
+      .reveal h4 { font-family: Monospace; color: #b5b6ff;  text-align: center;}
+			body {
+      color: #bf94f7;
+      background-color: #000055;
+		}
+
+		.form-line-active input:focus, .form-line-active textarea:focus {
+        border: hidden;
+
+       }
+
+    input:focus, textarea:focus, select:focus {
+         outline-offset: 0px;
+         outline: none;
+				 cursor: normal;
+			 }
+
+			 input, textarea {
+    cursor: pointer;
+}
+
+    </style>
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+          <h2>From MUSIC III to Csound 6.12</h2>
+					<h3>57 years of Computer Music Languages</h3>
+          <h4>Victor Lazzarini</h4>
+        </section>
+
+<section>
+<section>
+<h3>Introduction</h3>
+<p>
+In November 2018, Csound version 6.12 was released. This
+marks the final stage of the 6-series of the software. As we
+move towards version 7, we can trace back the 57 years of
+development and the body of knowledge that precedes it.
+</p>
+</section>
+<section>
+	<p>
+
+	<textarea class="cscode" id="instruments" cols="80" rows="10" spellcheck="false">
+instr 1
+a1 oscili p4, p5
+ out a1, a1
+endin
+schedule(1,0,1,0.5,440)
+</textarea>
+</p>
+<p>
+	<textarea class="console" cols="80" rows="14" id="console">
+				Csound: not loaded</textarea>
+</p>
+</section>
+</section>
+<section>
+<h3>Max Mathews</h3>
+</section>
+<section>
+<section>
+<h3>Roots: MUSIC III (1961) </h3>
+</section>
+<section>
+</section>
+</section>
+<section>
+<section>
+<h3>Trunk: MUSIC IV (1964) </h3>
+</section>
+<section>
+</section>
+</section>
+<section>
+<section>
+<h3>Branches </h3>
+</section>
+<section>
+<h3>Music 360</h3>
+</section>
+<section>
+<h3>Music 11</h3>
+</section>
+</section>
+<section>
+<section>
+<h3>Csound (1986)</h3>
+</section>
+<section>
+</section>
+</section>
+<section>
+	<a href="http://localhost:8080/examples/stria.html" data-preview-link>
+		<img src="csound.jpg" width="400"> </img>
+	</a>
+</section>
+<section>
+          <h2>Thank you!</h2>
+          <ul>
+            <li>Csound Homepage: https://www.csound.com</li>
+            <li>Email:Victor.Lazzarini@mu.ie</li>
+					</ul>
+</section>
+
+		</div>
+	</div>
+	 <script src="../examples/js/csound.js"></script>
+		<script src="js/reveal.js"></script>
+		<script src="plugin/markdown/marked.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script>
+      Reveal.initialize({history: true});
+
+      // Make sure target is _blank for all links to allow
+      // working within MyCourses
+      document.querySelectorAll("a").forEach(
+                (l) => l.setAttribute("target", "_blank"));
+
+								// called by csound.js when the WASM module loads
+				    function moduleDidLoad() {
+				       // play starts performance
+				       csound.Play();
+				     }
+
+             function compile() {
+							 // compile code
+				       csound.CompileOrc(document.getElementById('instruments').value);
+
+						 }
+				     // called by csound.js
+				     function attachListeners() {
+				         // event listeners
+								 var element = document.getElementById('console');
+                 element.addEventListener("click", compile);
+				     }
+
+				      var count = 0;
+				     // called by csound.js to display messages from Csound
+				     function handleMessage(message) {
+				       var element = document.getElementById('console');
+				       element.value += message;
+				       element.scrollTop = 99999; // focus on bottom
+				       count += 1;
+				       if (count == 1000) {
+				         element.value = ' ';
+				         count = 0;
+				       }
+				     }
+		</script>
+
+
+	</body>
+</html>
