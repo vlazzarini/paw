@@ -3,7 +3,7 @@ var fadeCounter = 5;
 var initcs = false;
 
 // load scripts
-CsoundObj.importScripts("../examples/js/").then(() => {
+CsoundObj.importScripts("../js/").then(() => {
         startCsound();
         initcs = true;
  });

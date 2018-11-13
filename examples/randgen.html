@@ -41,7 +41,7 @@
       background-color: #b5b6ff;
    }
   </style>
-  <script src="js/CsoundObj.js"></script>
+  <script src="../js/CsoundObj.js"></script>
   <script type="text/javascript">
     var random_colour;
 
@@ -74,7 +74,7 @@
 
     function main() {
 
-      CsoundObj.importScripts("./js/").then(() => {
+      CsoundObj.importScripts("../js/").then(() => {
         console.log = print_msg;
         console.warn = print_msg;
         document.getElementById('playButton').addEventListener('click',
