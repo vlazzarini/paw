@@ -148,6 +148,7 @@ CsoundScriptProcessorNode  = function(context, options) {
     CSOUND.prepareRT(cs);
     var sampleRate = CSOUND_AUDIO_CONTEXT.sampleRate;
     CSOUND.setOption(cs, "--sample-rate="+sampleRate);
+    CSOUND.setOption(cs, "--sample-rate="+(sampleRate/64));
     CSOUND.setOption(cs, "--nchnls=" + this.nchnls);
     CSOUND.setOption(cs, "--nchnls_i=" + this.nchnls_i); 
 
