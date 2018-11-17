@@ -108,8 +108,7 @@ class CsoundProcessor extends AudioWorkletProcessor {
         Csound.setOption(csObj, "-M0");
         Csound.setOption(csObj, "-+rtaudio=null");
         Csound.setOption(csObj, "-+rtmidi=null");
-        Csound.setOption(csObj, "--sample-rate="+sampleRate);
-        Csound.setOption(csObj, "--control-rate="+(sampleRate/64));
+        Csound.setOption(csObj, "--sample-rate="+sampleRate);  
         Csound.prepareRT(csObj);
         this.nchnls = options.outputChannelCount[0];
         this.nchnls_i = options.numberOfInputs;
