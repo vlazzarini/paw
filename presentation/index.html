@@ -1,225 +1,244 @@
 <html>
-	<head>
 
-    <title>Csound</title>
+<head>
 
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<title>Csound</title>
 
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/moon.css">
-		<!-- Theme used for syntax highlighting of code -->
-<link rel="stylesheet" href="lib/css/zenburn.css">
-<!-- Printing and PDF exports -->
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <style>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/moon.css">
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+	<!-- Printing and PDF exports -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<style>
 		#console {
 			font-family: Monospace;
-      color: #b5b6ff;
-      background-color: #000055;
-      font-size: 16px;
-      width: 805px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-style: hidden;
-      padding: 20px 0px;
-      }
-
-			#instruments {
-				font-family: Monospace;
-	      color: #b5b6ff;
-	      background-color: #000055;
-	      font-size: 16px;
-	      width: 805px;
-	      display: flex;
-	      align-items: center;
-	      justify-content: center;
-	      border-style: hidden;
-	      padding: 20px 0px;
-
-	    }
-
-
-      .reveal blockquote {
-          text-align: left;
-          width: 90%;
-          border: none;
-          box-shadow: none;
-          background: none;
-      }
-      .reveal blockquote:before { content: ''; }
-      .reveal blockquote:after { content: ''; }
-
-      .process-box1 {
-        background: #ccc;
-        color: black;
-        }
-
-      .arrow {
-        font-size: 2rem;
-      }
-			.reveal h2 { font-family: Monospace; }
-			.reveal h3 { color: #bf94f7; font-family: Monospace; }
-			.reveal li { color: #bf94f7; font-family: Monospace; }
-			.reveal section p { font-family: Monospace; color: #b5b6ff; text-align: left;}
-      .reveal section img { border: none; }
-      .reveal h4 { font-family: Monospace; color: #b5b6ff;  text-align: center;}
-			body {
-      color: #bf94f7;
-      background-color: #000055;
+			color: #b5b6ff;
+			background-color: #000055;
+			font-size: 16px;
+			width: 805px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-style: hidden;
+			padding: 20px 0px;
 		}
 
-		.form-line-active input:focus, .form-line-active textarea:focus {
-        border: hidden;
+		#instruments {
+			font-family: Monospace;
+			color: #b5b6ff;
+			background-color: #000055;
+			font-size: 16px;
+			width: 805px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-style: hidden;
+			padding: 20px 0px;
 
-       }
-
-    input:focus, textarea:focus, select:focus {
-         outline-offset: 0px;
-         outline: none;
-				 cursor: normal;
-			 }
-
-			 input, textarea {
-    cursor: pointer;
-}
-
+		}
 
 
-    </style>
+		.reveal blockquote {
+			text-align: left;
+			width: 90%;
+			border: none;
+			box-shadow: none;
+			background: none;
+		}
 
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
+		.reveal blockquote:before {
+			content: '';
+		}
+
+		.reveal blockquote:after {
+			content: '';
+		}
+
+		.process-box1 {
+			background: #ccc;
+			color: black;
+		}
+
+		.arrow {
+			font-size: 2rem;
+		}
+
+		.reveal h2 {
+			font-family: Monospace;
+		}
+
+		.reveal h3 {
+			color: #bf94f7;
+			font-family: Monospace;
+		}
+
+		.reveal li {
+			color: #bf94f7;
+			font-family: Monospace;
+		}
+
+		.reveal section p {
+			font-family: Monospace;
+			color: #b5b6ff;
+			text-align: left;
+		}
+
+		.reveal section img {
+			border: none;
+		}
+
+		.reveal h4 {
+			font-family: Monospace;
+			color: #b5b6ff;
+			text-align: center;
+		}
+
+		body {
+			color: #bf94f7;
+			background-color: #000055;
+		}
+
+		.form-line-active input:focus,
+		.form-line-active textarea:focus {
+			border: hidden;
+
+		}
+
+		input:focus,
+		textarea:focus,
+		select:focus {
+			outline-offset: 0px;
+			outline: none;
+			cursor: normal;
+		}
+
+		input,
+		textarea {
+			cursor: pointer;
+		}
+	</style>
+
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h2>From MUSIC III to Csound 6.12</h2>
+				<h3>57 years of Computer Music Languages</h3>
+				<h4>Victor Lazzarini</h4>
+			</section>
+			<section>
+				<h3>Introduction</h3>
+				<p>
+					In November 2018, Csound version 6.12 was released. This marks the final stage of the 6-series of the software. As we move towards version 7, we can trace back the 57 years of development and the body of knowledge that precedes it.
+				</p>
+			</section>
+			<section>
+				<h3>Max Mathews</h3>
+				<p>
+					Programming music and audio in digital computers started with Max Mathews and his group at Bell Labs in 1957.
+				</p>
+				<p>
+					Two developments were key:
+					<UL>
+						<LI> direct digital synthesis by software with MUSIC I and MUSIC II; </li>
+						<LI> a practical DAC to convert digital audio from computer tapes.</li>
+					</uL>
+				</p>
+			</section>
+			<section>
 				<section>
-          <h2>From MUSIC III to Csound 6.12</h2>
-					<h3>57 years of Computer Music Languages</h3>
-          <h4>Victor Lazzarini</h4>
-        </section>
-<section>
-<h3>Introduction</h3>
-<p>
-In November 2018, Csound version 6.12 was released. This
-marks the final stage of the 6-series of the software. As we
-move towards version 7, we can trace back the 57 years of
-development and the body of knowledge that precedes it.
-</p>
-</section>
-<section>
-<h3>Max Mathews</h3>
-<p>
-Programming music and audio in digital computers started with
-Max Mathews and his group at Bell Labs in 1957.
-</p>
-<p>
-Two developments were key:
-<UL>
-<LI> direct digital synthesis by software with
-MUSIC I and MUSIC II; </li>
-<LI> a practical DAC to convert digital audio
-from computer tapes.</li>
-</uL>
-</p>
-</section>
-<section>
-<section>
-<h3>Roots: MUSIC III (1961) </h3>
-<p> MUSIC III introduced the idea of an 'acoustic compiler'.
-<p>
-<p>
- It also introduced the concept of the unit generator, a central component of
- music programming languages.
-</p>
-</section>
-<section>
-<img src="mathews-bell-journal-1961.jpg" width="400"> </img>
-</section>
-<section>
-<img src="flowMIII.jpg" width="400"> </img> <br>
-<img src="codeMIII.jpg" width="400"> </img>
-</section>
-</section>
-<section>
-<section>
-<h3>Trunk: MUSIC IV (1964) </h3>
-<p> MUSIC IV introduced a domain-specific language for
-	music and a number of other unit generators.
-</p>
-<p>
-A more complex system, allowed the use of Fortran-coded
-routines for event manipulation.
-</p>
-</section>
-<section>
-<img src="flowMIV.jpg" width="400"> </img>
-</section>
-</section>
-<section>
-<section>
-<h3>Branches </h3>
-<p> MUSIC IV was the model for a great number of
-	systems that were developed in the following
-	decades.
-</p>
-<p>
-MUSIC IVB, MUSIC IVBF, MUSIC 4C, MUSIC 10
-MUSIC V, CMUSIC, CMIX, CLM
-</p>
-</section>
-<section>
-<h3>Music 360 (1968)</h3>
-<img src="codeM360.jpg" width="400"> </img>
-</section>
-<section>
-<h3>Music 11 (1977)</h3>
-<img src="music11.jpg" width="400"> </img> <br>
-<img src="codeM11.jpg" width="400"> </img>
-</section>
-</section>
-<section>
-<section>
-<h3>Csound</h3>
-<p> Released, 1986; RT audio &amp; MIDI, 1990; ANSI C, 1993;
-	Extended Csound, 1998; The Csound Book (MIT Press), 2000; API, 2003;
-	Version 5, 2006; Version 6, 2013; Csound: A Sound and Music Programming
-	System (Springer), 2016.
-</p>
-</section>
-<section>
-	<h3> Audio Programming with Csound </h3>
-	<img src="levels.png" width="400" style="background-color:#000055;"> </img>
-</section>
-<section>
-	<p>
-	<textarea class="cscode" id="instruments" cols="80" rows="10" spellcheck="false">
+					<h3>Roots: MUSIC III (1961) </h3>
+					<p> MUSIC III introduced the idea of an 'acoustic compiler'.
+						<p>
+							<p>
+								It also introduced the concept of the unit generator, a central component of music programming languages.
+							</p>
+				</section>
+				<section>
+					<img src="mathews-bell-journal-1961.jpg" width="400"> </img>
+				</section>
+				<section>
+					<img src="flowMIII.jpg" width="400"> </img> <br>
+					<img src="codeMIII.jpg" width="400"> </img>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h3>Trunk: MUSIC IV (1964) </h3>
+					<p> MUSIC IV introduced a domain-specific language for music and a number of other unit generators.
+					</p>
+					<p>
+						A more complex system, allowed the use of Fortran-coded routines for event manipulation.
+					</p>
+				</section>
+				<section>
+					<img src="flowMIV.jpg" width="400"> </img>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h3>Branches </h3>
+					<p> MUSIC IV was the model for a great number of systems that were developed in the following decades.
+					</p>
+					<p>
+						MUSIC IVB, MUSIC IVBF, MUSIC 4C, MUSIC 10 MUSIC V, CMUSIC, CMIX, CLM
+					</p>
+				</section>
+				<section>
+					<h3>Music 360 (1968)</h3>
+					<img src="codeM360.jpg" width="400"> </img>
+				</section>
+				<section>
+					<h3>Music 11 (1977)</h3>
+					<img src="music11.jpg" width="400"> </img> <br>
+					<img src="codeM11.jpg" width="400"> </img>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h3>Csound</h3>
+					<p> Released, 1986; RT audio &amp; MIDI, 1990; ANSI C, 1993; Extended Csound, 1998; The Csound Book (MIT Press), 2000; API, 2003; Version 5, 2006; Version 6, 2013; Csound: A Sound and Music Programming System (Springer), 2016.
+					</p>
+				</section>
+				<section>
+					<h3> Audio Programming with Csound </h3>
+					<img src="levels.png" width="400" style="background-color:#000055;"> </img>
+				</section>
+				<section>
+					<p>
+						<textarea class="cscode" id="instruments" cols="80" rows="10" spellcheck="false">
 instr 1
  out(oscili(p4, p5))
 endin
 schedule(1,0,1,0.5,440)
 </textarea>
-</p>
-<p>
-	<textarea class="console" cols="80" rows="14" id="console">
+					</p>
+					<p>
+						<textarea class="console" cols="80" rows="14" id="console">
 				Csound: not loaded</textarea>
-</p>
-</section>
-</section>
-<section>
-	<a href="http://localhost:8080/examples/stria.html" data-preview-link>
+					</p>
+				</section>
+			</section>
+			<section>
+				<a href="http://localhost:8080/examples/stria.html" data-preview-link>
 		<img src="csound.jpg" width="400"> </img>
 	</a>
-</section>
-<section>
-          <h2>Thank you!</h2>
-          <ul>
-            <li>Csound Homepage: <a href="https://csound.com" target="newwindow">www.csound.com<a> </li>
+			</section>
+			<section>
+				<h2>Thank you!</h2>
+				<ul>
+					<li>Csound Homepage: <a href="https://csound.com" target="newwindow">www.csound.com<a> </li>
             <li>Email: Victor.Lazzarini@mu.ie</li>
 					</ul>
 </section>
@@ -238,27 +257,71 @@ schedule(1,0,1,0.5,440)
       document.querySelectorAll("a").forEach(
                 (l) => l.setAttribute("target", "_blank"));
 
-								// called by csound.js when the WASM module loads
-				    function moduleDidLoad() {
-				       // play starts performance
-				       csound.Play();
-				     }
+		  function WebMIDI_init(midi_handle) {
+		     var haveDevs = false;
+		     var devs = midi_handle.inputs.values();
+		     for ( var m = devs.next(); m && !m.done; m = devs.next()) {
+		       m.value.onmidimessage = onMIDIEvent;
+		       haveDevs = true;
+		     }
+		     if (!haveDevs)
+		       console.log("No MIDIDevs");
+		     else {
+		       console.log("WebMIDI support enabled");
+		     }
+		   }
 
-             function compile() {
+		   function WebMIDI_err(err) {
+		       console.log("Error starting WebMIDI");
+		   }
+
+		   function onMIDIEvent(event) {
+		       switch (event.data[0] & 0xf0) {
+		         case 0x90:
+		           if (event.data[2]!=0) {
+		             csound.NoteOn(1, event.data[1], event.data[2]);
+		             return;
+		           }
+		         case 0x80:
+		           csound.NoteOff(1, event.data[1], event.data[2]);
+		           return;
+		       }
+		     }
+
+								// called by csound.js when the WASM module loads
+				function moduleDidLoad() {
+				       // play starts performance
+							 csound.Csound.setOption("--midi-velocity-amp=4")
+							 csound.Csound.setOption("--midi-key-cps=5")
+				       csound.Play();
+							 csound.CompileOrc(
+                   `massign 1,1
+			              instr 1
+				              out(oscili(p4, p5))
+			              endin
+										`);
+							 if (navigator.requestMIDIAccess)
+			          navigator.requestMIDIAccess().then(WebMIDI_init,
+				                              WebMIDI_err);
+		           else
+			           console.log("No WebMIDI support");
+				 }
+
+         function compile() {
 							 // compile code
 				       csound.CompileOrc(document.getElementById('instruments').value);
 
 						 }
 				     // called by csound.js
-				     function attachListeners() {
+				 function attachListeners() {
 				         // event listeners
 								 var element = document.getElementById('console');
                  element.addEventListener("click", compile);
-				     }
+				  }
 
 				      var count = 0;
-				     // called by csound.js to display messages from Csound
-				     function handleMessage(message) {
+				 // called by csound.js to display messages from Csound
+				 function handleMessage(message) {
 				       var element = document.getElementById('console');
 				       element.value += message;
 				       element.scrollTop = 99999; // focus on bottom
@@ -267,7 +330,7 @@ schedule(1,0,1,0.5,440)
 				         element.value = ' ';
 				         count = 0;
 				       }
-				     }
+				  }
 		</script>
 
 
