@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<title>Csound</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta property="og:title" content="Csound" />
+    <meta property="og:description" content="WebAudio Csound Interactive Editor" />
+    <meta property="og:image" content="http://live.csound.com/web/og_image.png" />
+    <meta property="og:url" content="http://live.csound.com"/>
+
+		<link rel="stylesheet" href="codemirror.css">
+		<link rel="stylesheet" href="theme/monokai.css">
+		<link rel="stylesheet" href="cslivecode.css">
+		<script src="codemirror.js"></script>
+		<script src="mode/csound/csound.js"></script>
+		<script src="addon/edit/matchbrackets.js"></script>
+		<script src="addon/edit/closebrackets.js"></script>
+		<script src="keymap/vim.js"></script>
+		<script src="keymap/emacs.js"></script>
+	</head>
+
+	<body>
+    <div id="loadDiv">
+      <code>... L O A D I N G &nbsp; C S O U N D ...</code>
+    </div>
+    <textarea id="csoundCodeEditor">
+;; Select this code and press ctrl-e to compile
+instr ping
+ a1 = oscili(p4,p5)
+ out(a1*expon(1,p3,0.001))
+endin
+schedule("ping", 0,1,0.5,440) 
+</textarea>
+</body>
+  <script src="../js/CsoundObj.js"></script>
+  <script src="cslivecode.js"></script>
+  
+</html>
