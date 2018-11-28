@@ -15,7 +15,7 @@ function evalCode() {
 
 
 let editor = CodeMirror.fromTextArea(
-    document.getElementById("csoundCodeEditor"), 
+    document.getElementById("csoundCodeEditor"),
     {
 	lineNumbers: true,
         matchBrackets: true,
@@ -26,6 +26,18 @@ let editor = CodeMirror.fromTextArea(
 	    "Ctrl-E": evalCode,
 	},
     });
+
+var count = 0;
+function displayMessage(message) {
+  var element = document.getElementById('console');
+  element.value += message + '\n';
+  element.scrollTop = 99999; // focus on bottom
+  count += 1;
+  if (count == 1000) {
+    element.value = ' ';
+    count = 0;
+  }
+}
 
 
 function loadCSD(editor, csdFile) {
@@ -56,14 +68,16 @@ function WebMIDI_err(err) {
 }
 
 function onMIDIEvent(event) {
-    cs.midiMessage(event.data[0], event.data[1], nevent.data[2]);
+    cs.midiMessage(event.data[0], event.data[1], event.data[2]);
 }
 
 
 function startCsound() {
+    console.warn = console.log = displayMessage;
     cs = new CsoundObj();
+    cs.setOption("-M0");
     cs.compileOrc("sr=48000\nksmps=32\n0dbfs=1\nnchnls=2\n");
-    cs.start();  
+    cs.start();
     var ld = document.getElementById("loadDiv");
     if(ld != null) {
         ld.remove();
@@ -82,5 +96,5 @@ function startCsound() {
 // Prevent Refresh
 
 window.onbeforeunload = function() {
-    return "Are you...sure?" 
+    return "Are you...sure?"
 };

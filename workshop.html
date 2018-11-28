@@ -66,7 +66,7 @@ code {
 <h2 id="workshop-materials">2. Workshop Materials</h2>
 <p>The first part of the workshop will concentrate on the csound.js frontend, which provides a straightforward way to embed Csound in a web page. The second part will introduce the full CsoundObj API, which provides a more comprehensive way to control Csound.</p>
 <h2 id="csound.js">2.1 csound.js</h2>
-<p>The <a href="examples/js/csound.js">csound.js</a>frontend provides a convenient way to run Csound in a browser. It provides a ready-to use Csound object and simple methods to implemental the typical interactions expected in terms of compilation and performance of code. The CsoundObj API is wrapped in this frontend, and a much more simplified use is possible.</p>
+<p>The <a href="js/csound.js">csound.js</a>frontend provides a convenient way to run Csound in a browser. It provides a ready-to use Csound object and simple methods to implemental the typical interactions expected in terms of compilation and performance of code. The CsoundObj API is wrapped in this frontend, and a much more simplified use is possible.</p>
 <p>Importing the csound.js script gives the global scope the <code>csound</code> object (of type <code>Csound</code>), which represents an instance of Csound. Calling the <code>Play()</code> method starts the engine and we can send in Csound code as a text string for compilation using the <code>CompileOrc(code)</code> method. Compiled instruments can be instantiated with a numeric score command using the <code>Event(command)</code> method. The following code except in the <a href="templates/basic2.html">basic.html</a> template illustrates this:</p>
 <pre><code>// play starts performance
 csound.Play();
@@ -98,9 +98,9 @@ function attachListeners() {
       </code></pre>
 <p>Other functionality of the <code>Csound</code> class is provided in the <a href="examples/docs/index.html">reference documentation</a>.</p>
 <h2 id="csoundobj">2.2 CsoundObj</h2>
-<p>CsoundObj is the JS API for Csound. It provides a series of methods to manipulate an instance of Csound, and since Csound is fully reentrant, more than one instances can be used if necessary. The first requirement is to load the the <a href="examples/js/CsoundObj.js">CsoundObj.js</a> script. This allows access to the script loading mechanism.</p>
+<p>CsoundObj is the JS API for Csound. It provides a series of methods to manipulate an instance of Csound, and since Csound is fully reentrant, more than one instances can be used if necessary. The first requirement is to load the the <a href="js/CsoundObj.js">CsoundObj.js</a> script. This allows access to the script loading mechanism.</p>
 <p>Loading the Csound WASM binaries and scripts is done by the function <code>CsoundObj.importScripts(location)</code>, where <code>location</code> is the path to the scripts directory. This function returns a promise that can be used to implement an initialisation callback as in</p>
-<pre><code>CsoundObj.importScripts(&quot;../examples/js/&quot;).then(() =&gt; {
+<pre><code>CsoundObj.importScripts(&quot;../js/&quot;).then(() =&gt; {
 // initialisation code
 }
 </code></pre>

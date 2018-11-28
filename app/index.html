@@ -2,7 +2,7 @@
 <html lang="en">
 
 	<head>
-		<title>Csound</title>
+		<title>WebCsound</title>
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -23,20 +23,57 @@
 		<script src="keymap/emacs.js"></script>
 	</head>
 
+	<style type="text/css">
+
+  #console {
+      font-family:  Monospace;
+      color: #ff0000;
+      background-color: #000000;
+      font-size: 16px;
+			height:100%;
+			width:92%;
+			padding: 25px;
+			display: block;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+		#consoleDiv {
+			  height:29%;
+				padding-top: 1%;
+	    }
+
+			.CodeMirror {
+				height:60%;
+			}
+
+			body {
+       background-color: black;
+
+			}
+
+  </style>
+
 	<body>
     <div id="loadDiv">
       <code>... L O A D I N G &nbsp; C S O U N D ...</code>
     </div>
-    <textarea id="csoundCodeEditor">
+    <textarea id="csoundCodeEditor" cols="80" rows="24">
 ;; Select this code and press ctrl-e to compile
 instr ping
  a1 = oscili(p4,p5)
  out(a1*expon(1,p3,0.001))
 endin
-schedule("ping", 0,1,0.5,440) 
+schedule("ping", 0,1,0.5,440)
 </textarea>
+
+<div id="consoleDiv">
+<textarea id="console" >
+</textarea>
+</div>
+
 </body>
   <script src="../js/CsoundObj.js"></script>
   <script src="cslivecode.js"></script>
-  
+
 </html>
