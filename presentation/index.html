@@ -276,16 +276,7 @@ schedule(1,0,1,0.5,440)
 		   }
 
 		   function onMIDIEvent(event) {
-		       switch (event.data[0] & 0xf0) {
-		         case 0x90:
-		           if (event.data[2]!=0) {
-		             csound.NoteOn(1, event.data[1], event.data[2]);
-		             return;
-		           }
-		         case 0x80:
-		           csound.NoteOff(1, event.data[1], event.data[2]);
-		           return;
-		       }
+            csound.Csound.midiMessage(event.data[0], event.data[1], event.data[2]);
 		     }
 
 								// called by csound.js when the WASM module loads
